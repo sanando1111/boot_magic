@@ -19,7 +19,7 @@ public class ProcessDAO {
 	public static final String USERNAME = "dataadmin";
 	public static final String PASSWORD = "dataadmin";
 
-	public List<ProcessFeds> getAllEmployees() {
+	public  List<ProcessFeds> getAllEmployees() {
 		logger.info("Start getAllEmployees.");
 		List<ProcessFeds> empList = new ArrayList<ProcessFeds>();
 		// JDBC Code - Start
@@ -33,10 +33,10 @@ public class ProcessDAO {
 			ProcessFeds f = new ProcessFeds();
 			/// if(empRow.get("a_file").toString())
 
-			if (empRow.get("a_file")!=null) {
+			if (empRow.get("a_file")!=null||empRow.get("a_file").toString()!="") {
 				f.setA_file(empRow.get("a_file").toString());
 			}
-			if (empRow.get("b_file")!=null) {
+			if (empRow.get("b_file")!=null||empRow.get("b_file").toString()!="") {
 				f.setB_file(empRow.get("b_file").toString());
 			}
 			

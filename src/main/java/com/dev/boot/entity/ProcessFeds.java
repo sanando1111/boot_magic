@@ -1,12 +1,15 @@
 package com.dev.boot.entity;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 
 @Entity
 public class ProcessFeds {
 
 	private String a_file;
 	private String b_file;
+	@Id
+	private int id;
 	public String getA_file() {
 		return a_file;
 	}
